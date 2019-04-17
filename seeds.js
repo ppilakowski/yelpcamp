@@ -29,19 +29,31 @@ function seedDB(){
             console.log("removed campgrounds");
             // add a few campgrounds
             data.forEach(function(seed){
-                Campground.create(seed, function(err, data){
+                Campground.create(seed, function(err, campground){
                     if(err){
                         console.log(err)
                     } else {
                         console.log("Campground created")
+                        //create a comment
+                        Comment.create(
+                            {
+                                text: "Jest super",
+                                author: "Homer"
+                            }, function(err, comment){
+                                if(err){
+                                    console.log(err)
+                                } else {
+                                    campground.comments.push(comment);
+                                    campground.save();
+                                    console.log("comment added")
+                                }
+                            }
+                        )
                     }
                 })
             })
         }
     })
-    
-    
-    // add a few comments
 }
 
 module.exports = seedDB;
