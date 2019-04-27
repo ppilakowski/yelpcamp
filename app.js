@@ -15,21 +15,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 
 
-//creation of a new campground in the DB
-// Campground.create(
-//     {
-//         name: "Tramp",
-//         image: "https://farm9.staticflickr.com/8460/8052825154_dc8f938b3f_b.jpg",
-//         description: "To jest najlepsza noclegownia w Toruniu"
-//     }, function(err, campground){
-//         if(err){
-//             console.log("Mamy babola!!!");
-//             console.log(err)
-//         } else {
-//             console.log("New campground added");
-//             console.log(campground)
-//         }
-//     });
+
 
 //ROUTES
 app.get("/", function(req, res){
@@ -75,15 +61,16 @@ app.get("/campgrounds/new", function(req,res){
 
 //SHOW - show page with more info about a campground
 app.get("/campgrounds/:id", function(req, res){
-    // find the campground with ID
-    Campground.findById(req.params.id, function(err, foundCampground){
+    //find the campground with provided ID
+    Campground.findById(req.params.id).populate("comments").exec(function(err, foundCampground){
         if(err){
-            console.log("Mamy babola!!!");
-            console.log(err)
+            console.log(err);
         } else {
-            res.render("show", {campground: foundCampground});     // show the campground with ID (stored in foundCampground argument)
+            console.log(foundCampground)
+            //render show template with that campground
+            res.render("show", {campground: foundCampground});
         }
-    })
+    });
 })
 
 
