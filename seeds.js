@@ -10,7 +10,7 @@ var data = [
     },
     {
         name: "Desert Mesa", 
-        image: "https://farm4.staticflickr.com/3859/15123592300_6eecab209b.jpg",
+        image: "https://image.ceneostatic.pl/data/products/53437739/i-eurotrail-namiot-rodzinny-dla-4-osob-alabama-btc.jpg",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in ornare ante. Donec feugiat quam nec felis tempor venenatis. In tempor suscipit nunc, sed iaculis magna vehicula vel. In scelerisque tellus quis mi hendrerit cursus. Quisque congue, ex id pellentesque placerat, risus enim fringilla orci, sit amet pharetra tortor arcu et justo. Sed turpis metus, iaculis tristique feugiat ut, mollis non ipsum. Praesent sit amet erat ut purus maximus malesuada. Donec tristique lorem et est aliquam pellentesque sit amet quis massa. Donec aliquet nisl sed urna venenatis pretium. Etiam pulvinar magna eget viverra consequat. Nunc non malesuada ante. Quisque tincidunt ligula aliquet dolor mollis, vel condimentum neque aliquet. Aenean consectetur ipsum eu condimentum tincidunt. Ut viverra, massa eget rhoncus sagittis, augue odio consectetur sem, tristique sagittis nisi dui vel nulla."
     },
     {
