@@ -20,8 +20,6 @@ var   Campground    = require("./models/campground"),
 
 // seedDB();
 mongoose.connect(process.env.DATABASEURL, {useNewUrlParser: true});
-// mongoose.connect('mongodb+srv://toldogom:1Qazxsw23edc@cluster0-w3leq.mongodb.net/test?retryWrites=true&w=majority');
-
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
