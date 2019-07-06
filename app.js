@@ -17,8 +17,12 @@ var   Campground    = require("./models/campground"),
       campgroundRoutes = require("./routes/campgrounds"),
       indexRoutes = require("./routes/index");
 
+
 // seedDB();
-mongoose.connect('mongodb+srv://toldogom:1Qazxsw23edc@cluster0-w3leq.mongodb.net/test?retryWrites=true&w=majority');
+mongoose.connect(process.env.DATABASEURL, {useNewUrlParser: true});
+// mongoose.connect('mongodb+srv://toldogom:1Qazxsw23edc@cluster0-w3leq.mongodb.net/test?retryWrites=true&w=majority');
+
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"))
